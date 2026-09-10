@@ -1,0 +1,27 @@
+{
+  "name": "template-surrealdb-company-brain",
+  "version": "1.0.0",
+  "description": "A shared company brain on SurrealDB Agent Memory (Spectron): one memory every teammate's conversations feed and draw from. Teach it once, and the whole team can recall it — with zero memory infrastructure to run.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "mastra dev",
+    "build": "mastra build",
+    "start": "mastra start",
+    "seed": "tsx scripts/seed.ts"
+  },
+  "dependencies": {
+    "@mastra/core": "latest",
+    "@surrealdb/mastra-ai": "1.0.0-beta.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.9",
+    "mastra": "latest",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3"
+  }
+}
