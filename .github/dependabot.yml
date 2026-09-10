@@ -1,0 +1,25 @@
+# See https://github.com/surrealdb-dev/security for the promotion baseline.
+version: 2
+updates:
+  # GitHub Actions — MANDATORY for every repo.
+  # Keeps the SHA-pinned `uses:` lines in .github/workflows fresh.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0   # security updates only
+    groups:
+      actions:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  # npm — package.json + package-lock.json at the repo root.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0   # security updates only
+    groups:
+      node:
+        applies-to: security-updates
+        patterns: ["*"]

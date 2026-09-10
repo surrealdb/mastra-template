@@ -1,0 +1,26 @@
+# Owners must be GitHub teams (e.g. @surrealdb/<team>), not individuals.
+# Last matching rule wins; put broad defaults first, tighten with paths below.
+#
+# NOTE: @surrealdb/devex is a team in the `surrealdb` org. While this repo
+# lives in `surrealdb-dev` these entries do not resolve, because a team can
+# only own repos in its own org. They become active on promotion to
+# `surrealdb`. See https://github.com/surrealdb-dev/security
+
+# Default owners for the repository
+* @surrealdb/devex
+
+# Configuration for CI
+/.github/ @surrealdb/devex
+
+# Security policy and code ownership
+SECURITY.md @surrealdb/devex
+/.github/CODEOWNERS @surrealdb/devex
+
+# Dependency manifests
+package.json @surrealdb/devex
+package-lock.json @surrealdb/devex
+
+# Agent instruction files (attack surface for prompt injection via PRs)
+CLAUDE.md @surrealdb/devex
+AGENTS.md @surrealdb/devex
+/mastra/agents/ @surrealdb/devex
